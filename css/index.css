@@ -22,6 +22,10 @@ h2 {
   color: #8a2be2;
 }
 
+h1 {
+  text-align: center;
+}
+
 #messages ul li {
   list-style: none;
   padding-left: 50px;
