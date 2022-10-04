@@ -1,0 +1,108 @@
+body,
+button {
+  background: radial-gradient(#e66465, #9198e5);
+  font-family: "Silkscreen", cursive;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
+  color: navy;
+}
+
+button {
+  color: #e66465;
+  border-radius: 10px;
+}
+
+section {
+  margin: 2px;
+  padding: 2px;
+}
+
+h1,
+h2 {
+  color: #8a2be2;
+}
+
+#messages ul li {
+  list-style: none;
+  padding-left: 50px;
+  position: relative;
+}
+
+ul li:before,
+#messages li:before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-image: url("https://img.icons8.com/nolan/344/stack.png");
+}
+
+#messages li {
+  margin: 10px;
+}
+
+footer {
+  text-align: center;
+  color: #8a2be2;
+}
+
+/* compatible with all devices */
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+  /* body,
+  button {
+    /* background: radial-gradient(#e66465, #9198e5);
+    font-family: "Silkscreen", cursive;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+      1px 1px 0 white; */
+}
+*/ body {
+  width: 100%;
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* body,
+  button {
+    background: radial-gradient(#e66465, #9198e5);
+    font-family: "Silkscreen", cursive;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+      1px 1px 0 white;
+  } */
+
+  body {
+    width: 75%;
+  }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  /* body,
+  button {
+    background: radial-gradient(#e66465, #9198e5);
+    font-family: "Silkscreen", cursive;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+      1px 1px 0 white;
+  } */
+  body {
+    width: 30%;
+  }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+  /* body,
+  button {
+    background: radial-gradient(#e66465, #9198e5);
+    font-family: "Silkscreen", cursive;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+      1px 1px 0 white;
+  } */
+  body {
+    width: 50%;
+  }
+}
