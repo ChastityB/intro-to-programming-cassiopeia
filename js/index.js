@@ -73,3 +73,25 @@ messageForm.addEventListener("submit", (event) => {
 
   messageForm.reset();
 });
+
+//Fetch Github Repositories
+let githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/ChastityB/repos");
+githubRequest.send();
+githubRequest.addEventListener("load", function callback() {
+  repositories = JSON.parse(this.response);
+  console.log(repositories);
+
+  //Display Repositories in list
+  projectSection = document.getElementById("projects");
+  projectList = projectSection.querySelector("ul");
+  for (let i = 0; i < repositories.length; i++) {
+    project = document.createElement("li");
+    //project.innerText = repositories[i].name;
+    projectLink = document.createElement("a");
+    projectLink.setAttribute("href", repositories[i].html_url);
+    projectLink.innerText = repositories[i].name;
+    project.appendChild(projectLink);
+    projectList.appendChild(project);
+  }
+});
