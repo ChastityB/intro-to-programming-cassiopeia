@@ -100,10 +100,11 @@ footer {
 
 #experience ul,
 #messages ul,
-#skills ul {
+#skills ul,
+#projects ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 10%;
+  grid-gap: 10px;
 }
 
 #projects ul li a {
