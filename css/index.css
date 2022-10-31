@@ -106,6 +106,10 @@ footer {
   column-gap: 10%;
 }
 
+#projects ul li a {
+  text-decoration: none;
+}
+
 /* compatible with all devices */
 /* For Desktop View */
 @media screen and (min-width: 1024px) {
