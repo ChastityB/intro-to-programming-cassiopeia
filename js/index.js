@@ -112,6 +112,8 @@ fetch("https://api.github.com/users/ChastityB/repos")
       project = document.createElement("li");
       projectLink = document.createElement("a");
       projectLink.setAttribute("href", repositories[i].html_url);
+      projectLink.setAttribute("rel", "noreferrer noopener");
+      projectLink.setAttribute("target", "_blank");
       projectLink.innerText = repositories[i].name;
       project.appendChild(projectLink);
       projectList.appendChild(project);
