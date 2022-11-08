@@ -19,8 +19,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#connect">Connect</a></li>
-      <li><a href="#leaveMessage">Leave a Message</a></li>
+      <li><a href="#leaveMessage">Contact</a></li>
     </ul>
   </nav>
   <body>
@@ -36,11 +35,17 @@
     <section id="experience">
       <h2>Experience</h2>
       <ul>
-        <li>Data Science - Predicting how to find the best movies</li>
-        <li>Java - creating a small events page</li>
         <li>
-          Web Development - created my own website with what I learned from
-          html, css, and Javascript
+          <span>Software Development Student - Code The Dream</span>
+          <span>July 2022 - Present</span>
+        </li>
+        <li>
+          <span>Data Science Teacher's Assistant</span>
+          <span>May 2022 - Present</span>
+        </li>
+        <li>
+          <span>Battery Lab Technician</span>
+          <span>July 2020 - Present</span>
         </li>
       </ul>
     </section>
@@ -53,43 +58,27 @@
       <h2>Projects</h2>
       <ul></ul>
     </section>
-
-    <section>
-      <h2 id="connect">Connect with me</h2>
-      <a href="https://github.com/ChastityB"
-        ><img
-          src="https://cdn.freebiesupply.com/logos/large/2x/github-icon-logo-png-transparent.png"
-          alt="Github Logo"
-          style="width: 42px; height: 42px"
-      /></a>
-      <a href="mailto: paredeschastity@gmail.com"
-        ><img
-          src="https://www.freepnglogos.com/uploads/logo-gmail-png/logo-gmail-png-file-gmail-icon-svg-wikimedia-commons-0.png"
-          alt="Gmail Logo"
-          style="width: 42px; height: 42px"
-      /></a>
-      <a href="https://www.linkedin.com/in/chastitybenton/"
-        ><img
-          src="https://as2.ftcdn.net/v2/jpg/03/96/56/19/1000_F_396561934_t1OwjMZHrVY211bHA5uUEAix0F1SyLci.jpg"
-          alt="LinkedIn Logo"
-          style="width: 42px; height: 42px"
-      /></a>
-    </section>
     <section>
       <h2 id="leaveMessage">Leave a Message</h2>
       <form name="leave_message">
-        <label for="name">Name</label>
-        <br />
-        <input type="text" id="name" name="name" required="true" />
-        <br />
-        <label for="email">Email</label>
-        <br />
-        <input type="email" id="email" name="email" required="true" />
-        <br />
-        <label for="message">Message</label>
-        <br />
-        <textarea id="message" name="message" required="true"></textarea>
-        <br />
+        <div class="field">
+          <label for="name">Name</label>
+          <br />
+          <input type="text" id="name" name="name" required="true" />
+          <br />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <br />
+          <input type="email" id="email" name="email" required="true" />
+          <br />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <br />
+          <textarea id="message" name="message" required="true"></textarea>
+          <br />
+        </div>
         <button type="submit">Submit</button>
       </form>
     </section>
@@ -97,7 +86,26 @@
       <h2>Messages</h2>
       <ul></ul>
     </section>
-    <footer></footer>
+    <footer id="footer">
+      <a href="https://github.com/ChastityB"
+        ><img
+          src="https://www.freepnglogos.com/uploads/512x512-logo-png/512x512-logo-github-icon-35.png"
+          alt="Github Logo"
+          style="width: 35px; height: 35px"
+      /></a>
+      <a href="mailto: paredeschastity@gmail.com"
+        ><img
+          src="https://www.freepnglogos.com/uploads/logo-gmail-png/logo-gmail-png-file-gmail-icon-svg-wikimedia-commons-0.png"
+          alt="Gmail Logo"
+          style="width: 35px; height: 35px"
+      /></a>
+      <a href="https://www.linkedin.com/in/chastitybenton/"
+        ><img
+          src="https://www.freepnglogos.com/uploads/linkedin-shiny-icon-logo-5.png"
+          alt="LinkedIn Logo"
+          style="width: 35px; height: 35px"
+      /></a>
+    </footer>
     <script src="js/index.js"></script>
   </body>
 </html>
