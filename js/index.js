@@ -29,7 +29,8 @@ messageForm.addEventListener("submit", (event) => {
   //Display messages in list
   let messageList = messageSelection.querySelector("ul");
   let newMessage = document.createElement("li");
-  newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> wrote: <span>${message}</span> &nbsp`; //this means the character is a non-breaking space aka will not break into a new line in the html
+  newMessage.innerHTML = `<span>${message}</span>
+  <p>${today.toLocaleString()} from <a href="mailto:${email}">${name}</a> &nbsp`; //this means the character is a non-breaking space aka will not break into a new line in the html
 
   //Display the messages section
   messageSelection.style.display = "block";
@@ -38,6 +39,7 @@ messageForm.addEventListener("submit", (event) => {
   let removeButton = document.createElement("button");
   removeButton.innerText = "remove";
   removeButton.setAttribute("type", "button");
+  removeButton.classList.add("removeButton");
   removeButton.addEventListener("click", (e) => {
     e.preventDefault();
     let entry = removeButton.parentNode;
@@ -55,6 +57,7 @@ messageForm.addEventListener("submit", (event) => {
   let editButton = document.createElement("button");
   editButton.innerText = "edit";
   editButton.setAttribute("type", "button");
+  editButton.classList.add("editButton");
   editButton.addEventListener("click", (event) => {
     event.preventDefault();
     newMessage.remove();
@@ -107,7 +110,6 @@ fetch("https://api.github.com/users/ChastityB/repos")
     projectList = projectSection.querySelector("ul");
     for (let i = 0; i < repositories.length; i++) {
       project = document.createElement("li");
-      //project.innerText = repositories[i].name;
       projectLink = document.createElement("a");
       projectLink.setAttribute("href", repositories[i].html_url);
       projectLink.innerText = repositories[i].name;
