@@ -1,9 +1,27 @@
+/* Light theme */
+:root {
+  --text-color: #f2c75c;
+  --background-color: #1b365d;
+  --background-banner: #4e73a6;
+  --nav-color: purple;
+  --remove-button: red;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --text-color: white;
+  --background-color: black;
+  --background-banner: gray;
+  --nav-color: rgb(64, 64, 64);
+  --remove-button: black;
+}
+
 /* Navigation */
 #nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: purple;
+  background-color: var(--nav-color);
 }
 
 ul li {
@@ -38,22 +56,22 @@ body {
 
 body,
 button {
-  background: #1b365d;
+  background: var(--background-color);
   font-family: "Silkscreen", cursive;
-  color: #f2c75c;
+  color: var(--text-color);
 }
 
 button {
   color: white;
   border-radius: 10px;
-  background-color: purple;
+  background-color: var(--nav-color);
 }
 .removeButton {
-  background-color: red;
+  background-color: var(--remove-button);
 }
 
 .editButton {
-  background-color: purple;
+  background-color: var(--nav-color);
 }
 
 section {
@@ -63,27 +81,27 @@ section {
 
 h1,
 h2 {
-  color: #f2c75c;
+  color: var(--text-color);
 }
 
 h1 {
   text-align: center;
   margin: 10px;
   margin-left: 40px;
-  background-color: #4e73a6;
+  background-color: var(--background-banner);
   border-radius: 10px;
   padding: 10px;
 }
 
 h2 {
-  background-color: purple;
+  background-color: var(--nav-color);
 }
 
 #about p,
 #skills ul li,
 #projects ul li {
   margin: 10px;
-  background-color: #4e73a6;
+  background-color: var(--background-banner);
   border-radius: 10px;
   padding: 10px;
 }
@@ -101,7 +119,7 @@ h2 {
   padding-left: 50px;
   position: relative;
   margin: 10px;
-  background-color: #4e73a6;
+  background-color: var(--background-banner);
   border-radius: 10px;
   padding: 10px;
 }
@@ -115,7 +133,7 @@ h2 {
 }
 
 footer {
-  background-color: purple;
+  background-color: var(--nav-color);
   padding: 2px 0px;
 }
 
@@ -133,7 +151,7 @@ footer a {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 10px;
-  background-color: #4e73a6;
+  background-color: var(--background-banner);
   border-radius: 10px;
   padding: 10px;
 }
@@ -154,6 +172,59 @@ input,
 textarea {
   width: 500px;
   height: 25px;
+}
+
+/* dark mode switch */
+.switch {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.theme {
+  display: inline-block;
+  height: 25px;
+  position: relative;
+  width: 50px;
+}
+.theme input {
+  display: none;
+}
+.slider.circle {
+  border-radius: 30px;
+}
+.slider {
+  background: #49fd01;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+.slider.circle:before {
+  border-radius: 50px;
+}
+.slider:before {
+  background: black;
+  bottom: 4px;
+  content: "";
+  height: 18px;
+  left: 4px;
+  position: absolute;
+  transition: 0.5s;
+  width: 18px;
+}
+em {
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+input:checked + .slider {
+  background: var(--text-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
 }
 
 @media screen and (max-width: 768px) {
