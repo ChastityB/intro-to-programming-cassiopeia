@@ -61,9 +61,9 @@ messageForm.addEventListener("submit", (event) => {
   editButton.addEventListener("click", (event) => {
     event.preventDefault();
     newMessage.remove();
-    let nameElement = document.querySelector("[name = name");
+    let nameElement = document.querySelector("[name = name]");
     nameElement.value = name;
-    let emailElement = document.querySelector("[name = email");
+    let emailElement = document.querySelector("[name = email]");
     emailElement.value = email;
     let messageElement = document.querySelector("[name = message]");
     messageElement.value = message;
